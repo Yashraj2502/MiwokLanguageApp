@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/tanBackground"
+    android:minHeight="@dimen/listItemHeight"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--  Numbers Category  -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/categoryNumbers">
+
+            <TextView
+                android:id="@+id/numbers"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingLeft="16dp"
+                android:text="@string/categoryNumbers"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!--  Family Category  -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/categoryFamily">
+
+            <TextView
+                android:id="@+id/family"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingLeft="16dp"
+                android:text="@string/categoryFamily"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!--  Colors Category  -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/categoryColors">
+
+            <TextView
+                android:id="@+id/colors"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingLeft="16dp"
+                android:text="@string/categoryColors"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!--  Phrases Category  -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/categoryPhrases">
+
+            <TextView
+                android:id="@+id/phrases"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingLeft="16dp"
+                android:text="@string/categoryPhrases"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>
